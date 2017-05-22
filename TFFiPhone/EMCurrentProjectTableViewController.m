@@ -17,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UIImageView *mentorImageView;
 @property (strong, nonatomic) IBOutlet UILabel *mentorNameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *mentorEmailLabel;
+@property (strong, nonatomic) IBOutlet UIButton *emailButton;
 @property (strong, nonatomic) IBOutlet UITextView *mentorDescription;
 
     
@@ -43,8 +43,12 @@
     [self.mentorImageView setImageWithURL:mentorImageURL];
     
     self.mentorNameLabel.text = self.project.mentor.username;
-    self.mentorEmailLabel.text = self.project.mentor.email;
+    [self.emailButton setTitle:self.project.mentor.email forState:UIControlStateNormal];
     self.mentorDescription.text = self.project.mentorDescriptionText;
+}
+
+-(void)viewDidLayoutSubviews{
+    self.mentorImageView.layer.cornerRadius = CGRectGetWidth(self.mentorImageView.frame)/2;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +87,15 @@
                       lineBreakMode:NSLineBreakByWordWrapping];
     
 }
+
+#pragma mark - Actions
+
+- (IBAction)emailTouched:(UIButton *)sender {
+    NSString* urlString = [NSString stringWithFormat:@"mailto:%@", sender.currentTitle];
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString] options:@{} completionHandler:nil];
+}
+
     
 #pragma mark - Segue
 

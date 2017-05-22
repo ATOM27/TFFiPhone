@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        self.projectID = responceObject[@"id"];
+        self.projectID = [responceObject[@"id"] stringValue];
         self.imageURL = responceObject[@"image"];
         self.descriptionText = responceObject[@"description"];
         self.descriptionText = [self.descriptionText stringByStrippingHTML];
@@ -32,5 +32,32 @@
     }
     return self;
 }
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        self.projectID = [aDecoder decodeObjectForKey:@"projectID"];
+        self.imageURL = [aDecoder decodeObjectForKey:@"imageURL"];
+        self.descriptionText = [aDecoder decodeObjectForKey:@"descriptionText"];
+        self.projectName = [aDecoder decodeObjectForKey:@"projectName"];
+        self.shortDescriptionText = [aDecoder decodeObjectForKey:@"shortDescriptionText"];
+        self.mentor = [aDecoder decodeObjectForKey:@"mentor"];
+        self.mentorImageURL = [aDecoder decodeObjectForKey:@"mentorImageURL"];
+        self.mentorDescriptionText = [aDecoder decodeObjectForKey:@"mentorDescriptionText"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.projectID forKey:@"projectID"];
+    [aCoder encodeObject:self.imageURL forKey:@"imageURL"];
+    [aCoder encodeObject:self.descriptionText forKey:@"descriptionText"];
+    [aCoder encodeObject:self.projectName forKey:@"projectName"];
+    [aCoder encodeObject:self.shortDescriptionText forKey:@"shortDescriptionText"];
+    [aCoder encodeObject:self.mentor forKey:@"mentor"];
+    [aCoder encodeObject:self.mentorImageURL forKey:@"mentorImageURL"];
+    [aCoder encodeObject:self.mentorDescriptionText forKey:@"mentorDescriptionText"];
+}
+
     
 @end

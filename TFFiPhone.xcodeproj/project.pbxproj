@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D624D6B11ECE264A00160E27 /* EMProjectNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D624D6B01ECE264A00160E27 /* EMProjectNewsTableViewController.m */; };
+		D624D6B51ECE272E00160E27 /* EMNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D624D6B41ECE272E00160E27 /* EMNewsTableViewController.m */; };
+		D632C8A61ECB3DB3007A83AF /* EMUserProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632C8A51ECB3DB3007A83AF /* EMUserProfileTableViewController.m */; };
 		D6470FEE1EC24343007F26FB /* LGSideMenuBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6470FE11EC24342007F26FB /* LGSideMenuBorderView.m */; };
 		D6470FEF1EC24343007F26FB /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6470FE31EC24342007F26FB /* LGSideMenuController.m */; };
 		D6470FF01EC24343007F26FB /* LGSideMenuGesturesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6470FE51EC24342007F26FB /* LGSideMenuGesturesHandler.m */; };
@@ -47,8 +50,8 @@
 		D683456A1EC090CC003DDE4F /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = D68345691EC090CC003DDE4F /* UIViewController+Alert.m */; };
 		D683456E1EC107CC003DDE4F /* EMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D683456D1EC107CC003DDE4F /* EMUser.m */; };
 		D699FD921EC8B707004DCD74 /* EMMainNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FD911EC8B707004DCD74 /* EMMainNewsTableViewController.m */; };
-		D699FD9A1EC8BDB4004DCD74 /* EMMainNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FD991EC8BDB4004DCD74 /* EMMainNewsCell.m */; };
-		D699FD9D1EC8C829004DCD74 /* EMMainNews.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FD9C1EC8C829004DCD74 /* EMMainNews.m */; };
+		D699FD9A1EC8BDB4004DCD74 /* EMNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FD991EC8BDB4004DCD74 /* EMNewsCell.m */; };
+		D699FD9D1EC8C829004DCD74 /* EMNews.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FD9C1EC8C829004DCD74 /* EMNews.m */; };
 		D699FDA11ECA0EED004DCD74 /* EMProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FDA01ECA0EED004DCD74 /* EMProjectTableViewController.m */; };
 		D699FDA51ECA0F34004DCD74 /* EMProject.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FDA41ECA0F34004DCD74 /* EMProject.m */; };
 		D699FDA91ECA0F9A004DCD74 /* EMProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D699FDA81ECA0F9A004DCD74 /* EMProjectCell.m */; };
@@ -59,6 +62,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D624D6AF1ECE264A00160E27 /* EMProjectNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMProjectNewsTableViewController.h; sourceTree = "<group>"; };
+		D624D6B01ECE264A00160E27 /* EMProjectNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMProjectNewsTableViewController.m; sourceTree = "<group>"; };
+		D624D6B31ECE272E00160E27 /* EMNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNewsTableViewController.h; sourceTree = "<group>"; };
+		D624D6B41ECE272E00160E27 /* EMNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNewsTableViewController.m; sourceTree = "<group>"; };
+		D632C8A41ECB3DB3007A83AF /* EMUserProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMUserProfileTableViewController.h; sourceTree = "<group>"; };
+		D632C8A51ECB3DB3007A83AF /* EMUserProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMUserProfileTableViewController.m; sourceTree = "<group>"; };
 		D6470FE01EC24342007F26FB /* LGSideMenuBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuBorderView.h; sourceTree = "<group>"; };
 		D6470FE11EC24342007F26FB /* LGSideMenuBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuBorderView.m; sourceTree = "<group>"; };
 		D6470FE21EC24342007F26FB /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
@@ -136,10 +145,10 @@
 		D683456D1EC107CC003DDE4F /* EMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMUser.m; sourceTree = "<group>"; };
 		D699FD901EC8B707004DCD74 /* EMMainNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMainNewsTableViewController.h; sourceTree = "<group>"; };
 		D699FD911EC8B707004DCD74 /* EMMainNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMainNewsTableViewController.m; sourceTree = "<group>"; };
-		D699FD981EC8BDB4004DCD74 /* EMMainNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMainNewsCell.h; sourceTree = "<group>"; };
-		D699FD991EC8BDB4004DCD74 /* EMMainNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMainNewsCell.m; sourceTree = "<group>"; };
-		D699FD9B1EC8C829004DCD74 /* EMMainNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMainNews.h; sourceTree = "<group>"; };
-		D699FD9C1EC8C829004DCD74 /* EMMainNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMainNews.m; sourceTree = "<group>"; };
+		D699FD981EC8BDB4004DCD74 /* EMNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNewsCell.h; sourceTree = "<group>"; };
+		D699FD991EC8BDB4004DCD74 /* EMNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNewsCell.m; sourceTree = "<group>"; };
+		D699FD9B1EC8C829004DCD74 /* EMNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNews.h; sourceTree = "<group>"; };
+		D699FD9C1EC8C829004DCD74 /* EMNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNews.m; sourceTree = "<group>"; };
 		D699FD9F1ECA0EED004DCD74 /* EMProjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMProjectTableViewController.h; sourceTree = "<group>"; };
 		D699FDA01ECA0EED004DCD74 /* EMProjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMProjectTableViewController.m; sourceTree = "<group>"; };
 		D699FDA31ECA0F34004DCD74 /* EMProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMProject.h; sourceTree = "<group>"; };
@@ -167,6 +176,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D624D6AE1ECE262100160E27 /* Main news VC */ = {
+			isa = PBXGroup;
+			children = (
+				D699FD901EC8B707004DCD74 /* EMMainNewsTableViewController.h */,
+				D699FD911EC8B707004DCD74 /* EMMainNewsTableViewController.m */,
+			);
+			name = "Main news VC";
+			sourceTree = "<group>";
+		};
+		D624D6B21ECE265100160E27 /* Project news */ = {
+			isa = PBXGroup;
+			children = (
+				D624D6AF1ECE264A00160E27 /* EMProjectNewsTableViewController.h */,
+				D624D6B01ECE264A00160E27 /* EMProjectNewsTableViewController.m */,
+			);
+			name = "Project news";
+			sourceTree = "<group>";
+		};
+		D632C8A71ECB3DF3007A83AF /* User profile */ = {
+			isa = PBXGroup;
+			children = (
+				D632C8A41ECB3DB3007A83AF /* EMUserProfileTableViewController.h */,
+				D632C8A51ECB3DB3007A83AF /* EMUserProfileTableViewController.m */,
+			);
+			name = "User profile";
+			sourceTree = "<group>";
+		};
 		D6470FDF1EC24342007F26FB /* LGSideMenuController */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +272,9 @@
 				D64710881EC2526B007F26FB /* Slide menu */,
 				D68345671EC07ECE003DDE4F /* HTTP */,
 				D683456F1EC107DC003DDE4F /* User */,
+				D632C8A71ECB3DF3007A83AF /* User profile */,
 				D68345301EC06EDB003DDE4F /* Login */,
-				D699FD931EC8B70E004DCD74 /* Main news */,
+				D699FD931EC8B70E004DCD74 /* News */,
 				D699FDA21ECA0EF1004DCD74 /* Projects */,
 				D683451C1EBF4F60003DDE4F /* Main.storyboard */,
 				D683456B1EC090D3003DDE4F /* Alert */,
@@ -355,33 +392,35 @@
 			name = User;
 			sourceTree = "<group>";
 		};
-		D699FD931EC8B70E004DCD74 /* Main news */ = {
+		D699FD931EC8B70E004DCD74 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				D699FD901EC8B707004DCD74 /* EMMainNewsTableViewController.h */,
-				D699FD911EC8B707004DCD74 /* EMMainNewsTableViewController.m */,
-				D699FD9E1EC8C8F5004DCD74 /* Main news post */,
+				D624D6B31ECE272E00160E27 /* EMNewsTableViewController.h */,
+				D624D6B41ECE272E00160E27 /* EMNewsTableViewController.m */,
+				D624D6AE1ECE262100160E27 /* Main news VC */,
+				D624D6B21ECE265100160E27 /* Project news */,
+				D699FD9E1EC8C8F5004DCD74 /* News post */,
 				D699FD971EC8B768004DCD74 /* Cell */,
 			);
-			name = "Main news";
+			name = News;
 			sourceTree = "<group>";
 		};
 		D699FD971EC8B768004DCD74 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D699FD981EC8BDB4004DCD74 /* EMMainNewsCell.h */,
-				D699FD991EC8BDB4004DCD74 /* EMMainNewsCell.m */,
+				D699FD981EC8BDB4004DCD74 /* EMNewsCell.h */,
+				D699FD991EC8BDB4004DCD74 /* EMNewsCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
 		};
-		D699FD9E1EC8C8F5004DCD74 /* Main news post */ = {
+		D699FD9E1EC8C8F5004DCD74 /* News post */ = {
 			isa = PBXGroup;
 			children = (
-				D699FD9B1EC8C829004DCD74 /* EMMainNews.h */,
-				D699FD9C1EC8C829004DCD74 /* EMMainNews.m */,
+				D699FD9B1EC8C829004DCD74 /* EMNews.h */,
+				D699FD9C1EC8C829004DCD74 /* EMNews.m */,
 			);
-			name = "Main news post";
+			name = "News post";
 			sourceTree = "<group>";
 		};
 		D699FDA21ECA0EF1004DCD74 /* Projects */ = {
@@ -491,6 +530,7 @@
 				TargetAttributes = {
 					D683450F1EBF4F60003DDE4F = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = B236C26GVW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -544,14 +584,17 @@
 				D683453F1EC07E7A003DDE4F /* AFHTTPSessionManager.m in Sources */,
 				D6470FEE1EC24343007F26FB /* LGSideMenuBorderView.m in Sources */,
 				D699FDB71ECA5440004DCD74 /* EMCurrentProjectTableViewController.m in Sources */,
+				D632C8A61ECB3DB3007A83AF /* EMUserProfileTableViewController.m in Sources */,
 				D6470FF31EC24343007F26FB /* LGSideMenuView.m in Sources */,
 				D683456E1EC107CC003DDE4F /* EMUser.m in Sources */,
 				D699FD921EC8B707004DCD74 /* EMMainNewsTableViewController.m in Sources */,
 				D699FDBA1ECA7F8F004DCD74 /* EMProjectMembersTableViewController.m in Sources */,
+				D624D6B11ECE264A00160E27 /* EMProjectNewsTableViewController.m in Sources */,
 				D683456A1EC090CC003DDE4F /* UIViewController+Alert.m in Sources */,
 				D699FDA91ECA0F9A004DCD74 /* EMProjectCell.m in Sources */,
 				D64710741EC25261007F26FB /* LeftViewController.m in Sources */,
 				D68345441EC07E7A003DDE4F /* AFURLSessionManager.m in Sources */,
+				D624D6B51ECE272E00160E27 /* EMNewsTableViewController.m in Sources */,
 				D6470FEF1EC24343007F26FB /* LGSideMenuController.m in Sources */,
 				D683455D1EC07E87003DDE4F /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D68345181EBF4F60003DDE4F /* AppDelegate.m in Sources */,
@@ -559,8 +602,8 @@
 				D64710621EC25261007F26FB /* NavigationController.m in Sources */,
 				D64710751EC25261007F26FB /* LeftViewCell.m in Sources */,
 				D699FDA11ECA0EED004DCD74 /* EMProjectTableViewController.m in Sources */,
-				D699FD9D1EC8C829004DCD74 /* EMMainNews.m in Sources */,
-				D699FD9A1EC8BDB4004DCD74 /* EMMainNewsCell.m in Sources */,
+				D699FD9D1EC8C829004DCD74 /* EMNews.m in Sources */,
+				D699FD9A1EC8BDB4004DCD74 /* EMNewsCell.m in Sources */,
 				D6470FF41EC24343007F26FB /* UIViewController+LGSideMenuController.m in Sources */,
 				D68345401EC07E7A003DDE4F /* AFNetworkReachabilityManager.m in Sources */,
 				D68345151EBF4F60003DDE4F /* main.m in Sources */,
@@ -624,6 +667,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -643,7 +687,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -685,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -696,10 +740,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B236C26GVW;
 				INFOPLIST_FILE = TFFiPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ATOM.TFFiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -707,10 +756,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B236C26GVW;
 				INFOPLIST_FILE = TFFiPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ATOM.TFFiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

@@ -8,7 +8,7 @@
 
 #import "EMHTTPManager.h"
 #import "AFHTTPSessionManager.h"
-#import "EMMainNews.h"
+#import "EMNews.h"
 #import "EMProject.h"
 
 @interface EMHTTPManager()
@@ -65,6 +65,12 @@
                    if(success){
                        
                        EMUser* currentUser = [[EMUser alloc] initWithUserDetail:responseObject[@"userdetail"] andUser:responseObject[@"user"]];
+                       
+                       [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:@[currentUser]] forKey:@"currentUser"];
+                       EMProject* currentProject = [[EMProject alloc] initWithResponceObject:responseObject[@"userproject"]];
+                       [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:@[currentProject]] forKey:@"currentProject"];
+                       [[NSUserDefaults standardUserDefaults] synchronize];
+
                        success(currentUser);
                        
                    }
@@ -101,7 +107,7 @@
                          NSMutableArray *objectsArray = [[NSMutableArray alloc] init];
                          
                          for(NSDictionary* dict in postNews){
-                             EMMainNews* mainNews = [[EMMainNews alloc] initWithServerResponse:dict];
+                             EMNews* mainNews = [[EMNews alloc] initWithServerResponse:dict];
                              [objectsArray addObject:mainNews];
                          }
                          
@@ -150,7 +156,7 @@
 }
     
 -(void) getAllMembersWithProjectID:(NSString*) projectID
-                         OnSiccess:(void(^)(NSArray* members)) success
+                         onSiccess:(void(^)(NSArray* members)) success
                          onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure{
     NSString* URLString = [NSString stringWithFormat:@"project/%@/members/", projectID];
     NSString* token = [[NSUserDefaults standardUserDefaults] valueForKey:@"token"];
@@ -180,6 +186,49 @@
                          }
                      }];
 
+}
+
+-(void) getCurrentProjectNewsWithProjectID:(NSString*)projectID
+                                    offset:(NSInteger) offset
+                                     limit:(NSInteger) limit
+                                 onSiccess:(void(^)(NSArray* posts)) success
+                                 onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure{
+    
+    NSString* URLString = [NSString stringWithFormat:@"project/%@/projectnews/", projectID];
+
+    
+    NSDictionary* paramethers = @{@"offset": @(offset),
+                                  @"limit": @(limit)};
+    
+    NSString* token = [[NSUserDefaults standardUserDefaults] valueForKey:@"token"];
+    
+    [self.sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [self.sessionManager.requestSerializer setValue:token forHTTPHeaderField:@"Authorization"];
+    
+    [self.sessionManager GET:URLString
+                  parameters:paramethers
+                    progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         
+                         NSArray* postNews = [responseObject objectForKey:@"results"];
+                         NSMutableArray *objectsArray = [[NSMutableArray alloc] init];
+                         
+                         for(NSDictionary* dict in postNews){
+                             EMNews* mainNews = [[EMNews alloc] initWithServerResponse:dict];
+                             [objectsArray addObject:mainNews];
+                         }
+                         
+                         if(success){
+                             success(objectsArray);
+                         }
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         if(failure){
+                             
+                             NSHTTPURLResponse* r = (NSHTTPURLResponse*)task.response;
+                             failure(error, r.statusCode);
+                             
+                         }
+                     }];
 }
     
 

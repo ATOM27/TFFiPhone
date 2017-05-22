@@ -6,11 +6,11 @@
 //  Copyright © 2017 Eugene Mekhedov. All rights reserved.
 //
 
-#import "EMMainNews.h"
+#import "EMNews.h"
 #import "UIImageView+AFNetworking.h"
 #import "NSString+replaceHTMLCode.h"
 
-@implementation EMMainNews
+@implementation EMNews
 
 -(id) initWithServerResponse:(NSDictionary*) responseObject{
     self = [super init];

@@ -9,10 +9,15 @@
 #import "UIViewController+LGSideMenuController.h"
 #import "EMMainNewsTableViewController.h"
 #import "EMProjectTableViewController.h"
+#import "EMUserProfileTableViewController.h"
+#import "EMProjectMembersTableViewController.h"
+#import "EMProjectNewsTableViewController.h"
+#import "EMUser.h"
 
 @interface LeftViewController ()
 
 @property (strong, nonatomic) NSArray *titlesArray;
+@property (strong, nonatomic) EMUser* currentUser;
 
 @end
 
@@ -21,19 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // -----
-
-    self.titlesArray = @[@"Open Right View",
-                         @"Change Root VC",
-                         @"Profile",
-                         @"News",
-                         @"Articles",
-                         @"Video",
-                         @"Music"];
-
-    // -----
-
     self.tableView.contentInset = UIEdgeInsetsMake(44.0, 0.0, 44.0, 0.0);
+    self.currentUser = [[NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"currentUser"]] firstObject];
+}
+
+-(void)viewDidLayoutSubviews{
+    
+    ((LeftViewCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]).titleLabel.text = [NSString stringWithFormat:@"%@ %@", self.currentUser.name, self.currentUser.surname];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -90,6 +89,16 @@
 //    }
 //    else {
     if(indexPath.row == 0){
+        [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
+            EMUserProfileTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EMUserProfileTableViewController"];
+            vc.currentUser = self.currentUser;
+            UIBarButtonItem* menuBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:vc action:@selector(showLeftViewAnimated:)];
+            vc.navigationItem.leftBarButtonItem = menuBarItem;
+            UINavigationController *navigationController = (UINavigationController *)mainViewController.rootViewController;
+            [navigationController setViewControllers:@[vc] animated:NO];
+        }];
+    }
+    if(indexPath.row == 1){
             [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
                 EMMainNewsTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainNewsStoryboard"];
                 vc.title = @"Main News";
@@ -97,7 +106,26 @@
                 [navigationController setViewControllers:@[vc] animated:NO];
             }];
     }
-    if(indexPath.row == 1){
+    if(indexPath.row == 2){
+        [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
+            EMProjectMembersTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EMProjectMembersTableViewController"];
+            vc.project = [[NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"currentProject"]] firstObject];
+            UIBarButtonItem* menuBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:vc action:@selector(showLeftViewAnimated:)];
+            vc.navigationItem.leftBarButtonItem = menuBarItem;
+            UINavigationController *navigationController = (UINavigationController *)mainViewController.rootViewController;
+            [navigationController setViewControllers:@[vc] animated:NO];
+        }];
+    }
+    if(indexPath.row == 3){
+        [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
+            EMProjectNewsTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EMProjectNewsTableViewController"];
+            
+            UINavigationController *navigationController = (UINavigationController *)mainViewController.rootViewController;
+            [navigationController setViewControllers:@[vc] animated:NO];
+        }];
+    }
+
+    if(indexPath.row == 4){
         [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
             EMProjectTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ProjectStoryboard"];
 

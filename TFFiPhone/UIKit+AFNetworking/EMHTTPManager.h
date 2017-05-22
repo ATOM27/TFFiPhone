@@ -16,7 +16,9 @@
 -(void)loginWithName:(NSString*)name password:(NSString*)password onSuccess:(void(^)(EMUser* user))success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
 -(void) getNewsWithOffset:(NSInteger) offset limit:(NSInteger) limit onSiccess:(void(^)(NSArray* posts)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
 -(void) getAllProjectsOnSiccess:(void(^)(NSArray* projects)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
--(void) getAllMembersWithProjectID:(NSString*) projectID OnSiccess:(void(^)(NSArray* members)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+-(void) getAllMembersWithProjectID:(NSString*) projectID onSiccess:(void(^)(NSArray* members)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+-(void) getCurrentProjectNewsWithProjectID:(NSString*)projectID offset:(NSInteger) offset limit:(NSInteger) limit onSiccess:(void(^)(NSArray* posts)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+
 
 
 @end

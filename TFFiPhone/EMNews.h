@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface EMMainNews : NSObject
+@interface EMNews : NSObject
     
     @property(strong, nonatomic) NSString* imageURL;
     @property(strong, nonatomic) NSString* postText;

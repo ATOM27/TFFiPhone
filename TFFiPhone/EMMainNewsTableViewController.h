@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EMNewsTableViewController.h"
 
-@interface EMMainNewsTableViewController : UITableViewController
+@interface EMMainNewsTableViewController : EMNewsTableViewController
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EMMainNewsCell : UITableViewCell
+@interface EMNewsCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *newsImageView;
 @property (strong, nonatomic) IBOutlet UILabel *newsTextLabel;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *newsImageHeightConstraint;

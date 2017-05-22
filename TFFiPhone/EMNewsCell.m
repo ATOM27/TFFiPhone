@@ -6,9 +6,9 @@
 //  Copyright © 2017 Eugene Mekhedov. All rights reserved.
 //
 
-#import "EMMainNewsCell.h"
+#import "EMNewsCell.h"
 
-@implementation EMMainNewsCell
+@implementation EMNewsCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -30,7 +30,7 @@
 }
     
 +(NSString*)reuseIdentifier{
-    return @"MainNewsCellIdentifier";
+    return @"NewsCellIdentifier";
 }
     
     

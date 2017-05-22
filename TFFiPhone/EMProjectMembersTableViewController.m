@@ -11,10 +11,12 @@
 #import "UIViewController+Alert.h"
 #import "EMMembersTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "EMUserProfileTableViewController.h"
 
 @interface EMProjectMembersTableViewController ()
     
 @property(strong, nonatomic) NSArray* membersArray;
+@property(strong, nonatomic) EMUser* selectedUser;
 
 @end
 
@@ -24,7 +26,7 @@
     [super viewDidLoad];
     
     [[EMHTTPManager sharedManager] getAllMembersWithProjectID:self.project.projectID
-                                                    OnSiccess:^(NSArray *members) {
+                                                    onSiccess:^(NSArray *members) {
                                                         self.membersArray = members;
                                                         [self.tableView reloadData];
                                                     } onFailure:^(NSError *error, NSInteger statusCode) {
@@ -65,6 +67,20 @@
     cell.memberNameSurname.text = [NSString stringWithFormat:@"%@ %@", currentUser.name, currentUser.surname];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    self.selectedUser = [self.membersArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"ShowMemberProfileIdentifier" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"ShowMemberProfileIdentifier"]){
+        EMUserProfileTableViewController* vc = segue.destinationViewController;
+        vc.currentUser = self.selectedUser;
+    }
 }
 
 
