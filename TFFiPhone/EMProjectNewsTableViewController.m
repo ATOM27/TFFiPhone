@@ -52,8 +52,12 @@
                                                                offset:[self.postsArray count]
                                                                 limit:25
                                                             onSiccess:^(NSArray *posts) {
-                                                                    [self.postsArray addObjectsFromArray:posts];
-                                                                    [self.tableView reloadData];
+                                                                    if([posts count] == 0){
+                                                                        [self alertWithTitle:@"No news" message:@"There are no any news."];
+                                                                    }else{
+                                                                        [self.postsArray addObjectsFromArray:posts];
+                                                                        [self.tableView reloadData];
+                                                                    }
                                                                 }
                                                             onFailure:^(NSError *error, NSInteger statusCode) {
                                                                     [self alertWithTitle:@"Error" message:[error localizedDescription]];

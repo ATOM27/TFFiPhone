@@ -10,11 +10,12 @@
 #import <UIKit/UIKit.h>
 
 @interface EMNews : NSObject
-    
-    @property(strong, nonatomic) NSString* imageURL;
-    @property(strong, nonatomic) NSString* postText;
-    
-    -(id) initWithServerResponse:(NSDictionary*) responseObject;
+
+@property(strong, nonatomic) NSString* imageURL;
+@property(strong, nonatomic) NSString* postText;
+
+-(id) initWithServerResponse:(NSDictionary*) responseObject;
+-(NSString*) shortTextDescription;
 
 
 @end

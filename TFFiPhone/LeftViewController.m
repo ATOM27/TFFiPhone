@@ -13,6 +13,8 @@
 #import "EMProjectMembersTableViewController.h"
 #import "EMProjectNewsTableViewController.h"
 #import "EMUser.h"
+#import "EMRoomTableViewController.h"
+#import "EMChatWebViewController.h"
 
 @interface LeftViewController ()
 
@@ -92,6 +94,7 @@
         [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
             EMUserProfileTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EMUserProfileTableViewController"];
             vc.currentUser = self.currentUser;
+            vc.isOwner = YES;
             UIBarButtonItem* menuBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:vc action:@selector(showLeftViewAnimated:)];
             vc.navigationItem.leftBarButtonItem = menuBarItem;
             UINavigationController *navigationController = (UINavigationController *)mainViewController.rootViewController;
@@ -134,6 +137,25 @@
         }];
     }
     
+    if(indexPath.row == 5){
+        [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
+            EMRoomTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EMRoomTableViewController"];
+            
+            UINavigationController *navigationController = (UINavigationController *)mainViewController.rootViewController;
+            [navigationController setViewControllers:@[vc] animated:NO];
+        }];
+    }
+    
+    if(indexPath.row == 6){
+        [mainViewController hideLeftViewAnimated:YES completionHandler:^(void) {
+            EMChatWebViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EMChatWebViewController"];
+            vc.request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://127.0.0.1:8000/chat/group/"]];
+            UIBarButtonItem* menuBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:vc action:@selector(showLeftViewAnimated:)];
+            vc.navigationItem.leftBarButtonItem = menuBarItem;
+            UINavigationController *navigationController = (UINavigationController *)mainViewController.rootViewController;
+            [navigationController setViewControllers:@[vc] animated:NO];
+        }];
+    }
 
 //    }
 }

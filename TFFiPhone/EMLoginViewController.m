@@ -62,6 +62,12 @@
     [[EMHTTPManager sharedManager] loginWithName:self.nameTextField.text
                                         password:self.passwordTextField.text
                                        onSuccess:^(EMUser *user) {
+                                           NSDictionary* auth = @{@"username":self.nameTextField.text,
+                                                                  @"password":self.passwordTextField.text};
+                                           
+                                           [[NSUserDefaults standardUserDefaults] setObject:auth forKey:@"auth"];
+                                           [[NSUserDefaults standardUserDefaults] synchronize];
+                                           
                                            [self performSegueWithIdentifier:@"MainViewControllerIdentifier" sender:self];
                                        } onFailure:^(NSError *error, NSInteger statusCode) {
                                            NSLog(@"Error =%@ code = %ld",[error localizedDescription], (long)statusCode);

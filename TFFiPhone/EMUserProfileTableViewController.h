@@ -12,5 +12,6 @@
 @interface EMUserProfileTableViewController : UITableViewController
 
 @property(strong, nonatomic) EMUser* currentUser;
+@property(assign, nonatomic) BOOL isOwner;
 
 @end

@@ -11,6 +11,7 @@
 #import "EMNews.h"
 #import "UIImageView+AFNetworking.h"
 #import "EMHTTPManager.h"
+#import "EMNewsDetailTableViewController.h"
 
 @interface EMNewsTableViewController ()
 
@@ -30,7 +31,7 @@
     [refresh addTarget:self action:@selector(refreshWall) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refresh;
     [self getNewsFromServer];
-
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +42,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.postsArray count];
+    return [self.postsArray count]+1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -49,6 +50,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(indexPath.section == [self.postsArray count]){
+    
+        UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"LoadMoreIdentifier"];
+        return cell;
+    
+    }
     
     EMNews* post = [self.postsArray objectAtIndex:indexPath.section];
     EMNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:[EMNewsCell reuseIdentifier] forIndexPath:indexPath];
@@ -58,7 +66,7 @@
     
     __weak EMNewsCell* wCell = cell;
     
-    cell.newsTextLabel.text = post.postText;
+    cell.newsTextLabel.text = [post shortTextDescription];
     
     [cell.newsImageView setImageWithURLRequest:req
                               placeholderImage:nil
@@ -76,7 +84,16 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if(indexPath.section == [self.postsArray count]){
+        [self getNewsFromServer];
+    }else{
+        EMNewsDetailTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EMNewsDetailTableViewController"];
+        vc.currentNews = [self.postsArray objectAtIndex:indexPath.section];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - Help methods

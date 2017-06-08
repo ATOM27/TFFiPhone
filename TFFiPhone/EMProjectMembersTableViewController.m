@@ -43,12 +43,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return [self.membersArray count];
 }
 
@@ -65,7 +63,8 @@
         cell.memberImageView.image = [UIImage imageNamed:@"user-2"];
     }
     cell.memberNameSurname.text = [NSString stringWithFormat:@"%@ %@", currentUser.name, currentUser.surname];
-    
+    cell.memberImageView.layer.cornerRadius = CGRectGetWidth(cell.memberImageView.frame)/2;
+
     return cell;
 }
 

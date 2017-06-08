@@ -18,7 +18,10 @@
 -(void) getAllProjectsOnSiccess:(void(^)(NSArray* projects)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
 -(void) getAllMembersWithProjectID:(NSString*) projectID onSiccess:(void(^)(NSArray* members)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
 -(void) getCurrentProjectNewsWithProjectID:(NSString*)projectID offset:(NSInteger) offset limit:(NSInteger) limit onSiccess:(void(^)(NSArray* posts)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
-
-
+//-(void) getUserDetailWithUserID:(NSString*)userID OnSiccess:(void(^)(EMUser* user)) success OnFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+-(void) getRoomsForCurrentUserOnSiccess:(void(^)(NSArray* rooms)) success onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+-(void) authMobileOnSiccess:(void(^)(void)) success OnFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+-(void)updateUserInfoWithDictionary:(NSDictionary*)params OnSiccess:(void(^)(void)) success OnFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+-(void)updatePasswordWithParamethers:(NSDictionary*) params OnSiccess:(void(^)(void)) success OnFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
 
 @end

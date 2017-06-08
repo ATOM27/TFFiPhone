@@ -29,6 +29,18 @@
     
     return text;
 }
+
+-(NSString*) shortTextDescription{
+    NSArray* post = [self.postText componentsSeparatedByString:@" "];
+    NSMutableString* returnString = [NSMutableString new];
+    for(int i = 0; i < [post count]; i++){
+        [returnString appendString:[NSString stringWithFormat:@"%@ ",[post objectAtIndex:i]]];
+        if(i == 50)
+            break;
+    }
+    [returnString appendString:@"..."];
+    return returnString;
+}
     
 
     

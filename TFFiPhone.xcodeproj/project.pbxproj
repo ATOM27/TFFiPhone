@@ -10,6 +10,7 @@
 		D624D6B11ECE264A00160E27 /* EMProjectNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D624D6B01ECE264A00160E27 /* EMProjectNewsTableViewController.m */; };
 		D624D6B51ECE272E00160E27 /* EMNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D624D6B41ECE272E00160E27 /* EMNewsTableViewController.m */; };
 		D632C8A61ECB3DB3007A83AF /* EMUserProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632C8A51ECB3DB3007A83AF /* EMUserProfileTableViewController.m */; };
+		D6375AE61ED5EA7C00A9163C /* EMChatWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6375AE51ED5EA7C00A9163C /* EMChatWebViewController.m */; };
 		D6470FEE1EC24343007F26FB /* LGSideMenuBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6470FE11EC24342007F26FB /* LGSideMenuBorderView.m */; };
 		D6470FEF1EC24343007F26FB /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6470FE31EC24342007F26FB /* LGSideMenuController.m */; };
 		D6470FF01EC24343007F26FB /* LGSideMenuGesturesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D6470FE51EC24342007F26FB /* LGSideMenuGesturesHandler.m */; };
@@ -24,6 +25,10 @@
 		D647108C1EC25285007F26FB /* imageLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = D64710891EC25285007F26FB /* imageLeft.png */; };
 		D647108D1EC25285007F26FB /* imageRight.png in Resources */ = {isa = PBXBuildFile; fileRef = D647108A1EC25285007F26FB /* imageRight.png */; };
 		D647108E1EC25285007F26FB /* imageRoot.png in Resources */ = {isa = PBXBuildFile; fileRef = D647108B1EC25285007F26FB /* imageRoot.png */; };
+		D65E6D591ED58556003B9328 /* EMRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65E6D581ED58556003B9328 /* EMRoomTableViewController.m */; };
+		D65E6D611ED5B4BA003B9328 /* EMRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = D65E6D601ED5B4BA003B9328 /* EMRoom.m */; };
+		D66AD8EC1ED72D8800237242 /* EMNewsDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66AD8EB1ED72D8800237242 /* EMNewsDetailTableViewController.m */; };
+		D66AD8F01ED7869200237242 /* EMSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66AD8EF1ED7869200237242 /* EMSettingsTableViewController.m */; };
 		D68345151EBF4F60003DDE4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D68345141EBF4F60003DDE4F /* main.m */; };
 		D68345181EBF4F60003DDE4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D68345171EBF4F60003DDE4F /* AppDelegate.m */; };
 		D683451E1EBF4F60003DDE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D683451C1EBF4F60003DDE4F /* Main.storyboard */; };
@@ -68,6 +73,8 @@
 		D624D6B41ECE272E00160E27 /* EMNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNewsTableViewController.m; sourceTree = "<group>"; };
 		D632C8A41ECB3DB3007A83AF /* EMUserProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMUserProfileTableViewController.h; sourceTree = "<group>"; };
 		D632C8A51ECB3DB3007A83AF /* EMUserProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMUserProfileTableViewController.m; sourceTree = "<group>"; };
+		D6375AE41ED5EA7C00A9163C /* EMChatWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatWebViewController.h; sourceTree = "<group>"; };
+		D6375AE51ED5EA7C00A9163C /* EMChatWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMChatWebViewController.m; sourceTree = "<group>"; };
 		D6470FE01EC24342007F26FB /* LGSideMenuBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuBorderView.h; sourceTree = "<group>"; };
 		D6470FE11EC24342007F26FB /* LGSideMenuBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuBorderView.m; sourceTree = "<group>"; };
 		D6470FE21EC24342007F26FB /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
@@ -93,6 +100,14 @@
 		D64710891EC25285007F26FB /* imageLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageLeft.png; sourceTree = "<group>"; };
 		D647108A1EC25285007F26FB /* imageRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageRight.png; sourceTree = "<group>"; };
 		D647108B1EC25285007F26FB /* imageRoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageRoot.png; sourceTree = "<group>"; };
+		D65E6D571ED58556003B9328 /* EMRoomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRoomTableViewController.h; sourceTree = "<group>"; };
+		D65E6D581ED58556003B9328 /* EMRoomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRoomTableViewController.m; sourceTree = "<group>"; };
+		D65E6D5F1ED5B4BA003B9328 /* EMRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRoom.h; sourceTree = "<group>"; };
+		D65E6D601ED5B4BA003B9328 /* EMRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRoom.m; sourceTree = "<group>"; };
+		D66AD8EA1ED72D8800237242 /* EMNewsDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNewsDetailTableViewController.h; sourceTree = "<group>"; };
+		D66AD8EB1ED72D8800237242 /* EMNewsDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNewsDetailTableViewController.m; sourceTree = "<group>"; };
+		D66AD8EE1ED7869200237242 /* EMSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSettingsTableViewController.h; sourceTree = "<group>"; };
+		D66AD8EF1ED7869200237242 /* EMSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSettingsTableViewController.m; sourceTree = "<group>"; };
 		D68345101EBF4F60003DDE4F /* TFFiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFFiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68345141EBF4F60003DDE4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D68345161EBF4F60003DDE4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -203,6 +218,15 @@
 			name = "User profile";
 			sourceTree = "<group>";
 		};
+		D6375AE71ED5EA9400A9163C /* Chat web */ = {
+			isa = PBXGroup;
+			children = (
+				D6375AE41ED5EA7C00A9163C /* EMChatWebViewController.h */,
+				D6375AE51ED5EA7C00A9163C /* EMChatWebViewController.m */,
+			);
+			name = "Chat web";
+			sourceTree = "<group>";
+		};
 		D6470FDF1EC24342007F26FB /* LGSideMenuController */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +271,43 @@
 			name = "Left VC";
 			sourceTree = "<group>";
 		};
+		D65E6D5A1ED58703003B9328 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				D65E6D571ED58556003B9328 /* EMRoomTableViewController.h */,
+				D65E6D581ED58556003B9328 /* EMRoomTableViewController.m */,
+				D65E6D621ED5B4C1003B9328 /* Room */,
+			);
+			name = Room;
+			sourceTree = "<group>";
+		};
+		D65E6D621ED5B4C1003B9328 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				D65E6D5F1ED5B4BA003B9328 /* EMRoom.h */,
+				D65E6D601ED5B4BA003B9328 /* EMRoom.m */,
+			);
+			name = Room;
+			sourceTree = "<group>";
+		};
+		D66AD8ED1ED72D9000237242 /* News detail */ = {
+			isa = PBXGroup;
+			children = (
+				D66AD8EA1ED72D8800237242 /* EMNewsDetailTableViewController.h */,
+				D66AD8EB1ED72D8800237242 /* EMNewsDetailTableViewController.m */,
+			);
+			name = "News detail";
+			sourceTree = "<group>";
+		};
+		D66AD8F11ED7869C00237242 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D66AD8EE1ED7869200237242 /* EMSettingsTableViewController.h */,
+				D66AD8EF1ED7869200237242 /* EMSettingsTableViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		D68345071EBF4F60003DDE4F = {
 			isa = PBXGroup;
 			children = (
@@ -273,9 +334,12 @@
 				D68345671EC07ECE003DDE4F /* HTTP */,
 				D683456F1EC107DC003DDE4F /* User */,
 				D632C8A71ECB3DF3007A83AF /* User profile */,
+				D66AD8F11ED7869C00237242 /* Settings */,
 				D68345301EC06EDB003DDE4F /* Login */,
 				D699FD931EC8B70E004DCD74 /* News */,
 				D699FDA21ECA0EF1004DCD74 /* Projects */,
+				D65E6D5A1ED58703003B9328 /* Room */,
+				D6375AE71ED5EA9400A9163C /* Chat web */,
 				D683451C1EBF4F60003DDE4F /* Main.storyboard */,
 				D683456B1EC090D3003DDE4F /* Alert */,
 				D699FDB01ECA3A54004DCD74 /* Categories */,
@@ -397,6 +461,7 @@
 			children = (
 				D624D6B31ECE272E00160E27 /* EMNewsTableViewController.h */,
 				D624D6B41ECE272E00160E27 /* EMNewsTableViewController.m */,
+				D66AD8ED1ED72D9000237242 /* News detail */,
 				D624D6AE1ECE262100160E27 /* Main news VC */,
 				D624D6B21ECE265100160E27 /* Project news */,
 				D699FD9E1EC8C8F5004DCD74 /* News post */,
@@ -531,6 +596,7 @@
 					D683450F1EBF4F60003DDE4F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = B236C26GVW;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -579,6 +645,8 @@
 				D683452F1EC06ECD003DDE4F /* EMLoginViewController.m in Sources */,
 				D64710871EC25261007F26FB /* MainViewController.m in Sources */,
 				D68345661EC07EC0003DDE4F /* EMHTTPManager.m in Sources */,
+				D66AD8EC1ED72D8800237242 /* EMNewsDetailTableViewController.m in Sources */,
+				D66AD8F01ED7869200237242 /* EMSettingsTableViewController.m in Sources */,
 				D68345211EBF4F60003DDE4F /* TFFiPhone.xcdatamodeld in Sources */,
 				D6470FF21EC24343007F26FB /* LGSideMenuSegue.m in Sources */,
 				D683453F1EC07E7A003DDE4F /* AFHTTPSessionManager.m in Sources */,
@@ -587,6 +655,7 @@
 				D632C8A61ECB3DB3007A83AF /* EMUserProfileTableViewController.m in Sources */,
 				D6470FF31EC24343007F26FB /* LGSideMenuView.m in Sources */,
 				D683456E1EC107CC003DDE4F /* EMUser.m in Sources */,
+				D65E6D591ED58556003B9328 /* EMRoomTableViewController.m in Sources */,
 				D699FD921EC8B707004DCD74 /* EMMainNewsTableViewController.m in Sources */,
 				D699FDBA1ECA7F8F004DCD74 /* EMProjectMembersTableViewController.m in Sources */,
 				D624D6B11ECE264A00160E27 /* EMProjectNewsTableViewController.m in Sources */,
@@ -600,6 +669,7 @@
 				D68345181EBF4F60003DDE4F /* AppDelegate.m in Sources */,
 				D68345601EC07E87003DDE4F /* UIProgressView+AFNetworking.m in Sources */,
 				D64710621EC25261007F26FB /* NavigationController.m in Sources */,
+				D6375AE61ED5EA7C00A9163C /* EMChatWebViewController.m in Sources */,
 				D64710751EC25261007F26FB /* LeftViewCell.m in Sources */,
 				D699FDA11ECA0EED004DCD74 /* EMProjectTableViewController.m in Sources */,
 				D699FD9D1EC8C829004DCD74 /* EMNews.m in Sources */,
@@ -607,6 +677,7 @@
 				D6470FF41EC24343007F26FB /* UIViewController+LGSideMenuController.m in Sources */,
 				D68345401EC07E7A003DDE4F /* AFNetworkReachabilityManager.m in Sources */,
 				D68345151EBF4F60003DDE4F /* main.m in Sources */,
+				D65E6D611ED5B4BA003B9328 /* EMRoom.m in Sources */,
 				D6470FF01EC24343007F26FB /* LGSideMenuGesturesHandler.m in Sources */,
 				D683455C1EC07E87003DDE4F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D683455F1EC07E87003DDE4F /* UIImageView+AFNetworking.m in Sources */,
@@ -749,6 +820,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ATOM.TFFiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -765,6 +837,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ATOM.TFFiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
